@@ -1,0 +1,47 @@
+[user]
+	name = ycxzfforever
+	email = ycxzfforever@163.com
+[gui]
+	recentrepo = E:/CheckOut/git/JXGF_CNG_V4.0
+[credential]
+	helper = store
+
+#difftool 配置
+[diff]
+	tool = bc4
+[difftool]
+	prompt = false
+[difftool "bc4"]
+	cmd = "\"D:/Program Files (x86)/Beyond Compare 4/BCompare.exe\" \"$LOCAL\" \"$REMOTE\""
+	
+#mergeftool 配置
+[merge]
+	tool = bc4
+[mergetool]
+	prompt = false
+[mergetool]	
+	keepBackup = false #让git mergetool不再生成备份文件（*.orig）
+[mergetool "bc4"]
+	cmd = "\"D:/Program Files (x86)/Beyond Compare 4/BCompare.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
+	trustExitCode = true
+
+#别名配置	
+[alias]
+	rr = reset HEAD
+	br = branch -av
+	st = status
+	co = checkout	
+    cob = checkout -b
+    cotb = checkout --track -b
+	ca = commit --amend
+	di = diff
+	dt = difftool
+	dc = diff --cached
+	dh = diff HEAD
+	cp = cherry-pick
+	lg = log --pretty=format:'%h |%an |%ai |%s'
+	lo = log --pretty=format:'%h |%an |%s' --since='4 days ago'
+	oneline = log --pretty=oneline --since='2 days ago'
+	onelog = log -p -1	
+[core]
+	editor = 'D:\\Program Files (x86)\\Notepad++\\notepad++.exe' -multiInst -notabbar -nosession -noPlugin '$*'
