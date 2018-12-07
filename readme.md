@@ -12,16 +12,16 @@
 	其实质就是删除缓冲区里的文件，再提交给服务器端。<br>
 	1.首先进入要删除的文件夹或文件的根目录下，如```F:\myprojects\supermarketmanager1115```<br>
 	2.执行下面的语句”some-directory”是相对于本地根目录下的文件夹/文件路径<br>
-	```
+	
 		1、git rm -r --cached some-directory
 		2、git commit -m 'Remove the now ignored directory "some-directory"'
 		3、git push origin master
-	```
+	
 	另外git pull --rebase origin master这句挺有用的，记录一下。这句的意思是：把github上最新的文件下载下来。
 	
 	
 ### 3、增加另外一个仓库地址
-	```git remote set-url --add origin``` 仓库地址
+	git remote set-url --add origin 仓库地址
 
 ### 4、配置图形化diff工具和merge工具
 	#difftool 配置
